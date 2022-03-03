@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* se le pone en HTML, */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: auto;
+  max-width: 1220px;
+}
+
+.btn {
+  border: none;
+  background-color: white;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.navigator {
+  /* border: 1px solid #ccc; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.navigator__logo {
+  /* flex: 2; */
+  width: 130px;
+  height: 64px;
+  padding: 13px 5px;
+  /* border: 1px solid #ccc; */
+}
+.navigator__logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.navigator__search {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+  /* flex: 8; */
+  /* border: 1px solid #ccc; */
+}
+
+.navigator__search span {
+  padding: 10px 16px;
+  position: relative;
+  cursor: pointer;
+}
+
+.navigator__search span:hover {
+  opacity: 0.8;
+}
+
+.navigator__search span::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  border: 1px solid black;
+  bottom: 0;
+  right: 50%;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.navigator__search span:hover::after {
+  width: 4px;
+  right: 49%;
+  opacity: 1;
+}
+
+.navigator__others {
+  /* flex: 2; */
+  /* border: 1px solid #ccc; */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.4rem;
+}
+
+.search {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  display: flex;
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.search__option {
+  display: flex;
+  gap: 5px;
+  border-radius: 50px;
+  /* border-right: 1px solid #ccc; */
+  flex-direction: column;
+  flex: 1.5;
+  padding: 15px 20px;
+  position: relative;
+  font-size: 1.2rem;
+}
+
+.search__option::after {
+  position: absolute;
+  content: "";
+  height: 40%;
+  top: 30%;
+  right: 0;
+  /* width: 30px; */
+  border-right: 1px solid #ddd;
+}
+
+.search__option:nth-of-type(2),
+.search__option:nth-of-type(3) {
+  flex: 1;
+}
+
+.search__option input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  outline: none;
+}
+
+#ho:focus ~ #in1 {
+  border: #e41d5b 1px solid;
+}
+
+.search__option:hover {
+  background-color: #ebebeb;
+}
+
+.search__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e41d5b;
+  color: white;
+}
+
+.cover-page {
+  margin-top: 50px;
+  background-image: url("https://jooinn.com/images/travel-10.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 600px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.cover-page::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  background-color: black;
+  opacity: 0.2;
+}
+
+.cover-page > * {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+}
+
+.cover-page__title {
+  font-size: 4.3rem;
+  text-align: center;
+  /* opacity: 1.2; */
+  color: white;
+  z-index: 1;
+}
+
+.cover-page__btn {
+  top: 70%;
+  z-index: 1;
+}
+
+.inspiration {
+  margin: 50px 0px;
+}
+
+.inspiration__title {
+  font-size: 4.2rem;
+  margin-bottom: 35px;
+}
+
+.inspiration__cards {
+  display: flex;
+  gap: 25px;
+}
+
+.inspiration__card {
+  height: 400px;
+  flex: 1;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.inspiration__card img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.inspiration__card-info {
+  height: 100%;
+  margin: -10px;
+  padding: 30px 20px;
+  background-color: #de3151;
+  color: white;
+}
+
+.inspiration__card-info h3 {
+  font-size: 3.5rem;
+}
+
+.inspiration__card-info p {
+  margin: 10px;
+  font-size: 2rem;
+}
+
+.discover {
+  margin: 50px 0px;
+}
+.discover__title {
+  font-size: 4.2rem;
+  margin-bottom: 35px;
+}
+
+.discover__activities {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.discover__activiti-card {
+  height: 620px;
+  border-radius: 15px;
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 80px;
+  background-position: left;
+  background-size: cover;
+}
+
+.discover__activiti-card:nth-child(1) {
+  background-image: url("https://i.blogs.es/199e7b/simon-english-672450-unsplash/1366_2000.jpeg");
+}
+
+.discover__activiti-card h3 {
+  font-size: 5.3rem;
+}
+
+.questions {
+  height: 632px;
+  padding: 80px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-image: url("https://www.lavanguardia.com/files/image_948_465/files/fp/uploads/2021/07/08/60e7275ceb10c.r_d.1083-1293.jpeg");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.questions::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 15px;
+  background-color: black;
+  opacity: 0.2;
+}
+
+.questions h2 {
+  position: relative;
+  text-align: left;
+  font-size: 6rem;
+  color: white;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+.questions__btn {
+  position: relative;
+  z-index: 1;
+}
+
+footer {
+  background-color: #f7f7f7;
+}
+.footer {
+  display: flex;
+  font-size: 1.4rem;
+  margin-top: 50px;
+  padding: 50px 0;
+}
+
+.footer__category {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+}
+
+.footer__category p {
+  font-weight: 700;
+}
+
+.footer__category a {
+  text-decoration: none;
+  color: #666;
+}
+
+.others {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding: 20px 0;
+  font-size: 1.4rem;
+  color: #666;
+}
+
+.others__legal > * {
+  margin-right: 5px;
+  color: #666;
+  text-decoration: none;
+}
+.others__social-media > * {
+  margin-right: 5px;
+  color: #666;
+  text-decoration: none;
+}
